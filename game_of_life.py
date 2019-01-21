@@ -63,11 +63,9 @@ def visualize(config, nsteps):
     for i in range(nsteps):
         generations.append(config)
         config = nextgen_matrix(config)
-
     for config in generations:
         plt.matshow(config, fignum=0)
         plt.pause(0.5) # pause in seconds
-
     plt.show()
 
 def main():
